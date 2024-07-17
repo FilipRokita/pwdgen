@@ -1,7 +1,5 @@
 # pwdgen
 
-## Overview
-
 Program ``pwdgen`` is a command-line utility designed to generate secure random passwords of a specified length using printable ASCII characters. It offers a simple and effective way to create passwords suitable for various applications, including securing accounts, generating temporary access credentials, or creating cryptographic keys.
 
 ## Usage
