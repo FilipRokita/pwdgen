@@ -1,6 +1,16 @@
 # pwdgen
 
-Simple command-line utility to generate a random password of specified length.
+Program pwdgen generates a random password of specified length when executed with a command-line argument indicating the desired length of the password. It verifies the input length provided by the user, ensuring it is a valid number. Here’s how it works:
+
+The program begins by checking if the correct number of arguments (only one, the password length) is provided. If not, it displays the correct usage format and exits.
+
+Next, it verifies that the provided argument is indeed a number by checking each character in the string representation of the argument.
+
+Once validated, the program converts this string to an integer to determine the length of the password to generate.
+
+Using random number generation (rand()), it constructs a password of the specified length by selecting random ASCII characters in the range from 33 to 126 (which covers printable ASCII characters).
+
+Finally, the generated password is printed to the console.
 
 ## Usage
 
