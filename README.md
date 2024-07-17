@@ -44,7 +44,15 @@ This will output a random password consisting of printable ASCII characters
 - It generates a random password using characters from ASCII values 33 to 126.
 - Only one argument (the password length) should be provided.
 
-## Author
+## Other
+
+### Author
 
 Filip Rokita  
 Website: [www.filiprokita.com](http://www.filiprokita.com)
+
+### Legal
+This program is provided as-is, without warranties or conditions of any kind, either express or implied. By using this program, you agree that the author is not responsible for any damage that may occur as a result of its use.
+
+### License
+See the [LICENSE](./LICENSE) file for licensing information.
