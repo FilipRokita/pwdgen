@@ -1,16 +1,8 @@
 # pwdgen
 
-Program pwdgen generates a random password of specified length when executed with a command-line argument indicating the desired length of the password. It verifies the input length provided by the user, ensuring it is a valid number. Here’s how it works:
+## Overview
 
-The program begins by checking if the correct number of arguments (only one, the password length) is provided. If not, it displays the correct usage format and exits.
-
-Next, it verifies that the provided argument is indeed a number by checking each character in the string representation of the argument.
-
-Once validated, the program converts this string to an integer to determine the length of the password to generate.
-
-Using random number generation (rand()), it constructs a password of the specified length by selecting random ASCII characters in the range from 33 to 126 (which covers printable ASCII characters).
-
-Finally, the generated password is printed to the console.
+Program ``pwdgen`` is a command-line utility designed to generate secure random passwords of a specified length using printable ASCII characters. It offers a simple and effective way to create passwords suitable for various applications, including securing accounts, generating temporary access credentials, or creating cryptographic keys.
 
 ## Usage
 
@@ -20,12 +12,18 @@ This program requires `Clang` and `Make` to build and run.
 
 ### How to Use
 
-1. Compile the program using a C compiler:
+1. Clone the repository and navigate to the directory:
+    ```
+    git clone <repository_url>
+    cd pwdgen
+    ```
+
+2. Compile the program using a C compiler:
     ```
     make pwdgen
     ```
 
-2. Run the program:
+3. Run the program:
     ```
     ./pwdgen <length>
     ```
@@ -37,11 +35,12 @@ Generate password of length 12:
 $ ./pwdgen 12
 v%b82j1Sll+2)V
 ```
-This will output a random password consisting of printable ASCII characters
+This will output a random password consisting of printable ASCII characters.
+
 
 ### Notes
-- The program checks if a valid integer length is provided as an argument.
-- It generates a random password using characters from ASCII values 33 to 126.
+- Ensure `<length>` is a valid integer.
+- Passwords are generated using ASCII values 33 to 126.
 - Only one argument (the password length) should be provided.
 
 ## Other
