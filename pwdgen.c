@@ -1,3 +1,7 @@
+// pwdgen
+//  Filip Rokita
+// www.filiprokita.com
+
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
