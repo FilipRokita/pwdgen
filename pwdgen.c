@@ -1,11 +1,9 @@
-// pwdgen
-//  Filip Rokita
-// www.filiprokita.com
-
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
+
+#define MAX_LENGTH 2147483647
 
 int main(int argc, char *argv[])
 {
@@ -32,13 +30,34 @@ int main(int argc, char *argv[])
     // convert the string to an integer
     int length = atoi(input);
 
-    // generate a random password
-    char password[length];
+    // check length of string
+    // FIX: prevent segmentation fault!
+    if (length > MAX_LENGTH)
+    {
+        printf("Maximum length allowed is %d\n", MAX_LENGTH);
+        return 1;
+    }
+
+    // generate a pseudo-random password
+    // try to allocate size in memory
+    char *password = malloc(length + 1);
+    if (password == NULL)
+    {
+        printf("Memory allocation failed\n");
+        return 1;
+    }
+
     for (int i = 0; i < length; i++)
     {
         password[i] = (rand() % 94) + 33;
     }
 
+    // FIX: null-terminated string
+    password[length] = '\0';
+
     // print the password
     printf("%s\n", password);
+
+    // free allocated block
+    free(password);
 }
